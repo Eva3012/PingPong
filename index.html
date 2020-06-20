@@ -49,6 +49,19 @@ timer = setInterval(draw, 5);
 
 
 });
+  
+window.addEventListener('devicemotion', function(event){
+  
+  var xacceleration = Math.round(event.acceleration.x*10)/10;
+  
+  
+
+ var xneigung =  Math.round(event.accelerationIncludingGravity.x*10)/10;
+  
+ padlx = padlx - xneigung;
+  
+});
+  
 draw();
 
 }
